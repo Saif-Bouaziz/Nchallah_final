@@ -43,7 +43,7 @@ function UpdateType() {
 <nav>
     <div class="container">
         <div class="text-center">
-            <a href="/" class="nav-brand text-dark">Liste des types de dossier</a>
+            <a href="/Type-dossier" class="nav-brand text-dark">Liste des types de dossier</a>
         </div>
     </div>
 </nav> 

@@ -6,7 +6,11 @@ var mongoose= require('mongoose');
 require('dotenv').config()
 
 
-const routerUsers= require('./routes/users.route')
+const routerUsers= require('./routes/users.route');
+const routerTimbre= require('./routes/timbre.route');
+const routerRecette= require('./routes/recette.route');
+const routerEmplacement= require('./routes/emplacement.route');
+const routerPhotocopie= require('./routes/photocopie.route');
 
 var app = express();
 
@@ -22,6 +26,12 @@ mongoose.connect("mongodb://saif:ipeis2020@ac-zxwojzh-shard-00-00.7c4r6sr.mongod
 .catch(err=>console.log(err.message)) 
 
 
-app.use('/api', routerUsers)
+
+
+app.use('/api', routerUsers);
+app.use('/api', routerTimbre);
+app.use('/api', routerRecette);
+app.use('/api', routerEmplacement);
+app.use('/api', routerPhotocopie);
 
 module.exports = app;
