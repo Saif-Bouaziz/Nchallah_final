@@ -43,7 +43,7 @@ function UpdateType() {
 <nav>
     <div class="container">
         <div class="text-center">
-            <a href="/Type-dossier" class="nav-brand text-dark">Liste des types de dossier</a>
+            <a href="/" class="nav-brand text-dark">Liste des types de dossier</a>
         </div>
     </div>
 </nav> 
@@ -51,18 +51,17 @@ function UpdateType() {
     <div class="container">
 <div class="box-nav d-flex justify-between">
 <div class="filter">
-    <a href="/"><i class="fas fa-angle-double-left"></i> Retourner</a>
+    <a href="/CreatePost/parametres/Type_dossier"><i class="fas fa-angle-double-left"></i> Retourner</a>
 </div>
 </div>
 <div class="form-title text-center">
- <h2 class="text-dark">Nouveau Type Dossier</h2>
- <span class="text-light">Remplir le formulaire çi dessous puis cliquer sur enregistrer pour ajouter un nouveau </span>
+ <h2 class="text-dark">Modifier Type Dossier</h2>
+ <span class="text-light">Remplir le formulaire çi dessous puis cliquer sur enregistrer pour enregistrer les modifications </span>
 </div>
 <form action="/api/types" method="POST" id="add_type" onSubmit={onSubmitHandler} >
-<InputGroup label="Email" type="text" name="Email" onChangeHandler={onChangeHandler} value={form.Email} /> 
-<InputGroup label="Lastname" type="text" name="Lastname" onChangeHandler={onChangeHandler} value={form.Lastname} /> 
-<InputGroup label="Firstname" type="text" name="Firstname" onChangeHandler={onChangeHandler} value={form.Firstname}/> 
-<InputGroup label="Age" type="text" name="Age" onChangeHandler={onChangeHandler} value={form.Age}/>   
+<InputGroup label="Libelle" type="text" name="Email" onChangeHandler={onChangeHandler} value={form.Email} /> 
+
+
 
 <div class="new_user" >
 <div class="form-group">

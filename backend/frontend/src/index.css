@@ -124,9 +124,10 @@ a {
 }
 
 #header nav{
-    background-color:rgb(206, 184, 150);
+    /*background-color:rgb(206, 184, 150);*/
     padding: 1em 0;
-    width: 100%;
+    width: 100%; 
+    
 }
 
 #site-main{

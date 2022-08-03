@@ -46,7 +46,7 @@ const AddTypeDossier = () => {
     <div class="container">
         <div class="box-nav d-flex justify-between">
            <div class="filter">
-               <a href="/"><i class="fas fa-angle-double-left"></i> Retourner</a>
+               <a href="/CreatePost/parametres/Type_dossier"><i class="fas fa-angle-double-left"></i> Retourner</a>
            </div>
         </div>
         <div class="form-title text-center">
@@ -54,11 +54,7 @@ const AddTypeDossier = () => {
             <span class="text-light">Remplir le formulaire çi dessous puis cliquer sur enregistrer pour ajouter un nouveau Type de Dossier</span>
         </div>
         <form action="/api/types" method="POST" id="add_type" onSubmit={onSubmitHandler} >
-        <InputGroup label="Email" type="text" name="Email" onChangeHandler={onChangeHandler} errors={errors.Email}/> 
-        <InputGroup label="Lastname" type="text" name="Lastname" onChangeHandler={onChangeHandler} errors={errors.Lastname}/> 
-        <InputGroup label="Firstname" type="text" name="Firstname" onChangeHandler={onChangeHandler} errors={errors.Firstname}/> 
-        <InputGroup label="Age" type="text" name="Age" onChangeHandler={onChangeHandler} errors={errors.Age}/>   
-        
+        <InputGroup label="Libelle" type="text" name="Email" onChangeHandler={onChangeHandler} errors={errors.Email}/> 
          <div class="new_user" >
         <div class="form-group">
             <button   type="submit" class="btn text-dark update" >Enregistrer</button>

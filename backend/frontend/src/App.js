@@ -20,7 +20,15 @@ import Photocopie from "./pages/Photocopie";
 import Transport from "./pages/Transport";
 import Recette_du_finance from "./pages/Recette_du_finance"; 
 import AddTypeDossier from "./pages/AddTypeDossier."; 
-import UpdateType from "./pages/UpdateType";
+import UpdateType from "./pages/UpdateType"; 
+import Updateutilisateurs  from "./pages/Updateutilisateurs"; 
+import AddUtilisateurs from "./pages/AddUtilisateurs"; 
+import AddPrime from "./pages/AddPrime"; 
+import UpdatePrime from "./pages/UpdatePrime"; 
+import AddParametre from "./pages/AddParametre"; 
+import UpdateParametre from "./pages/UpdateParametre"; 
+import AddHonoraire from "./pages/AddHonoraire"; 
+import UpdateHonoraire from "./pages/UpdateHonoraire";
 
 
 import { Outlet } from 'react-router-dom';
@@ -80,15 +88,29 @@ const App = () => {
     
 
 
+          <Route path="/CreatePost/parametres/parametres_globales" element={<Parametres_globales />} />  
+<Route path="/AddParametre" element={<AddParametre />} />
+<Route path="/parametres/:id" element={<UpdateParametre />} />  
+<Route path="/CreatePost/parametres/honoraires_en_extra" element={<Honoraires_extra />} />  
+<Route path="/AddHonoraire" element={<AddHonoraire />} />
+<Route path="/honoraires/:id" element={<UpdateHonoraire />} /> 
           
-          <Route path="/CreatePost/parametres/parametres_globales" element={<Parametres_globales />} />
-          <Route path="/CreatePost/parametres/honoraires_en_extra" element={<Honoraires_extra />} />
+          
     
           <Route path="/CreatePost/parametres/tribunaux_et_administration" element={<Tribu_et_admin />} />
-          <Route path="/CreatePost/parametres/utilisateur" element={<Utilisateur />} />
+          
+          <Route path="/CreatePost/parametres/utilisateur" element={<Utilisateur />} />  
+<Route path="/AddUtilisateur" element={<AddUtilisateurs />} />   
+<Route path="/utilisateur/:id" element={<Updateutilisateurs />} />  
+          
+          
           <Route path="/CreatePost/parametres/huissier" element={<Huissier />} />
           <Route path="/CreatePost/parametres/collaborateur" element={<Collaborateur />} />
-          <Route path="/CreatePost/parametres/greffier" element={<Greffier />} />
+          
+          <Route path="/CreatePost/parametres/prime_greffier" element={<Prime_greffier />} />  
+<Route path="/AddPrime" element={<AddPrime />} />   
+<Route path="/prime/:id" element={<UpdatePrime />} />  
+          
           <Route path="/CreatePost/parametres/prime_greffier" element={<Prime_greffier />} />
           
           <Route path="/CreatePost/parametres/transport" element={<Transport />} />

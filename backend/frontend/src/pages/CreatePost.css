@@ -3,7 +3,7 @@
     padding: 0 !important;
     background-color: rgb(255, 255, 255) !important;
     font-family: 'Open Sans', sans-serif !important;
-    color: black;
+    color: rgb(11, 8, 8);
 
 
 }
@@ -20,7 +20,7 @@
 
 .side-menu {
     position: fixed !important;
-    background: rgb(0, 0, 0) !important;
+    background:rgb(185, 168, 143) !important;
     width: 300px !important;
     height: 100% !important;
     text-align: justify !important;
@@ -92,7 +92,7 @@
 
 .side-menu-footer {
     width: 100% !important;
-    background: #333 !important;
+    background: #32383e !important;
     position: absolute !important;
     bottom: 0 !important;
     left: 0 !important;

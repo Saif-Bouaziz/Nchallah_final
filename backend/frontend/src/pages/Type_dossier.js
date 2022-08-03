@@ -64,10 +64,7 @@ const Type_dossier = () => {
                    <thead class="thead-dark">
                        <tr> 
                            
-                           <th>Email</th>
-                           <th>FirstName</th>  
-                           <th>LastName</th> 
-                           <th>Age</th> 
+                           <th>Libelle</th>
                            <th>Action</th>
                        </tr>
                    </thead>
@@ -75,8 +72,8 @@ const Type_dossier = () => {
                
                
              {  
-                users.map(({Email, Lastname , Firstname , Age, _id}) => (
-                <TypeShow Email={Email} Lastname={Lastname} Firstname={Firstname} Age={Age} ID={_id} OnDelete={OnDelete} />
+                users.map(({Email, _id}) => (
+                <TypeShow Email={Email}  ID={_id} OnDelete={OnDelete} />
                 ))
              }
                
