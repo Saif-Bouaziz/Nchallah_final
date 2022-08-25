@@ -39,7 +39,9 @@ const menuItems = [
     {
         name: 'Dossier',
         exact: true,
-        to: "/CreatePost/dossier",
+        subMenus: [
+            { name: "Emplacement dossier", to: "/CreatePost/dossier/Emplacement_Dossier" },
+        ],
         iconClassName: 'bi bi-folder',
     },
 ];

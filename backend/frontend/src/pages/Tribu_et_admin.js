@@ -1,13 +1,87 @@
-import React from 'react';
-import SideMenu from '../component/SideMenu';
+import React, { useEffect, useState } from 'react';
 import "./Type_dossier.css";
+import TribuShow from '../component/TribuShow';
+import axios from 'axios'
 
 const tribu_et_admin = () => {
+    const [tribunaux, setTribunaux] = useState([]);
+    const [form, setForm] = useState({});
+    const [errors, setErrors] = useState({});
+    const [message, setMessage] = useState("");
+    const [show, setShow] = useState(false);
+    const [searchTerm, setsearchTearm] = useState("");
+
+
+
+    const OnDelete = (id) => {
+        if (window.confirm("Are you sure to delete this user ? ")) {
+            axios.delete(`/api/Tribunaux/${id}`)
+                .then(res => {
+                    setMessage(res.data.message)
+                    setShow(true)
+                    setTimeout(() => {
+                        setShow(false)
+                    }, 4000)
+
+                })
+        }
+
+    }
+    useEffect(() => {
+        axios.get('/api/Tribunaux')
+            .then(res => {
+                setTribunaux(res.data)
+
+            });
+
+    }, [])
+
     return (
         <div>
-            
             <div className='page'>
-                <h1>Tribuneaux et administration</h1>
+                <header id="header">
+                    <nav>
+                        <div class="container">
+                            <div class="text-center">
+                                <a href="/" class="nav-brand text-dark">Liste des tribunaux</a>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+                <main id="site-main">
+                    <div class="container">
+                        <div class="box-nav d-flex justify-between">
+                            <a href="/AddTribunal" class="border-shadow">
+                                <span class="text-gradient">Ajouter Tribunal </span>
+                            </a>
+                        </div>
+
+                        <form action="/" method="POST">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+
+                                        <th>Tribunal</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        tribunaux.map(({ Tribunal, _id }) => (
+                                            <TribuShow Tribunal={Tribunal} Id={_id} OnDelete={OnDelete} />
+
+
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </main>
+
+
+
+
             </div>
         </div>
     );
