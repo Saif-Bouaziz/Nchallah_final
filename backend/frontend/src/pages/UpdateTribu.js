@@ -45,7 +45,7 @@ const UpdateTribu = () => {
                     <nav>
                         <div class="container">
                             <div class="text-center">
-                                <a href="/tribunaux_et_administration" class="nav-brand text-dark">Liste des Tribunuax</a>
+                                <a class="nav-brand text-dark">Liste des Tribunuax</a>
                             </div>
                         </div>
                     </nav>

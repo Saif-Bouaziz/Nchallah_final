@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import "./Type_dossier.css";
 import TribuShow from '../component/TribuShow';
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+
 
 const tribu_et_admin = () => {
     const [tribunaux, setTribunaux] = useState([]);
@@ -34,7 +36,7 @@ const tribu_et_admin = () => {
 
             });
 
-    }, [])
+    })
 
     return (
         <div>
@@ -43,7 +45,7 @@ const tribu_et_admin = () => {
                     <nav>
                         <div class="container">
                             <div class="text-center">
-                                <a href="/" class="nav-brand text-dark">Liste des tribunaux</a>
+                                <a class="nav-brand text-dark">Liste des tribunaux</a>
                             </div>
                         </div>
                     </nav>
@@ -51,9 +53,9 @@ const tribu_et_admin = () => {
                 <main id="site-main">
                     <div class="container">
                         <div class="box-nav d-flex justify-between">
-                            <a href="/AddTribunal" class="border-shadow">
+                            <Link to={"/CreatePost/parametres/tribunaux_et_administration/AddTribunal"} class="border-shadow">
                                 <span class="text-gradient">Ajouter Tribunal </span>
-                            </a>
+                            </Link>
                         </div>
 
                         <form action="/" method="POST">

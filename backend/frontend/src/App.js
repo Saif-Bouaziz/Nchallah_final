@@ -106,7 +106,7 @@ const App = () => {
 
 
           <Route path="/CreatePost/parametres/tribunaux_et_administration" element={<Tribu_et_admin />} />
-          <Route path="/AddTribunal" element={<AddTribu />} />
+          <Route path="/CreatePost/parametres/tribunaux_et_administration/AddTribunal" element={<AddTribu />} />
           <Route path="/CreatePost/parametres/tribunaux_et_administration/:id" element={<UpdateTribu />} />
           <Route path="/CreatePost/parametres/tribunaux_et_administration/:id/service" element={<Service />} />
           <Route path="/CreatePost/parametres/tribunaux_et_administration/:id/service/AddService" element={<AddService />} />

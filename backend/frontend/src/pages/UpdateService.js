@@ -21,7 +21,7 @@ const UpdateService = () => {
         e.preventDefault();
         axios.put(`/api/service/${id}`, form)
             .then(res => {
-                navigate('/CreatePost/parametres/tribunaux_et_administration')
+                navigate(-1)
             })
             .catch(err => setErrors(err.response.data))
 
@@ -41,7 +41,7 @@ const UpdateService = () => {
                     <nav>
                         <div class="container">
                             <div class="text-center">
-                                <a href="/tribunaux_et_administration" class="nav-brand text-dark">Liste des Services</a>
+                                <a class="nav-brand text-dark">Liste des Services</a>
                             </div>
                         </div>
                     </nav>
@@ -49,7 +49,7 @@ const UpdateService = () => {
                 <div class="container">
                     <div class="box-nav d-flex justify-between">
                         <div class="filter">
-                            <Link to={"/CreatePost/parametres/tribunaux_et_administration"}><i class="fas fa-angle-double-left"></i> Retourner</Link>
+                            <button onClick={() => navigate(-1)}><i class="fas fa-angle-double-left"></i> Retourner</button>
                         </div>
                     </div>
                     <div class="form-title text-center">

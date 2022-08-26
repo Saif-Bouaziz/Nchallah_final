@@ -3,19 +3,16 @@ import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css";
 import InputGroup from '../component/InputGroup'
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 
 const AddService = () => {
-    const [tribunaux, setTribunaux] = useState([])
+
     const { id } = useParams();
-    useEffect(() => {
-        axios.get('/api/Tribunaux')
-            .then(res => {
-                setTribunaux(res.data)
-            })
-    })
-    const [form, setForm] = useState({});
+    const [form, setForm] = useState({ idTribu: id });
+    const navigate = useNavigate()
     const [errors, setErrors] = useState({});
+
+
 
     const onChangeHandler = (e) => {
         setForm({
@@ -29,11 +26,12 @@ const AddService = () => {
         axios.post('/api/service', form)
             .then(res => {
                 alert(res.data.message)
-
+                navigate(`/CreatePost/parametres/tribunaux_et_administration/${id}/service`)
             })
             .catch(err => setErrors(err.response.data))
 
     }
+
 
     return (
         <div>
@@ -43,7 +41,7 @@ const AddService = () => {
                     <nav>
                         <div class="container">
                             <div class="text-center">
-                                <a href="/" class="nav-brand text-dark">Liste des Services</a>
+                                <a class="nav-brand text-dark">Liste des Services</a>
                             </div>
                         </div>
                     </nav>
@@ -70,8 +68,6 @@ const AddService = () => {
                             <InputGroup label="jeudi_a" type="text" name="jeudi_a" onChangeHandler={onChangeHandler} />
                             <InputGroup label="vendredi_a" type="text" name="vendredi_a" onChangeHandler={onChangeHandler} />
                             <InputGroup label="samedi_a" type="text" name="samedi_a" onChangeHandler={onChangeHandler} />
-                            <InputGroup label="idTribu" type="text" name="idTribu" onChangeHandler={onChangeHandler} x={id} />
-
 
                             <div class="new_user" >
                                 <div class="form-group">

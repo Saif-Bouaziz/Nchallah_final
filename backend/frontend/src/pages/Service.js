@@ -55,7 +55,15 @@ const Service = () => {
                     <nav>
                         <div class="container">
                             <div class="text-center">
-                                <a href="/" class="nav-brand text-dark">Liste des services</a>
+                                <a class="nav-brand text-dark">Liste des services</a>
+                                <br />
+                                <br />
+
+                                {
+                                    tribunaux.map(({ Tribunal, _id }) => (
+                                        (_id == id) ? (Tribunal) : (null)))
+
+                                }
                             </div>
                         </div>
                     </nav>
@@ -63,6 +71,13 @@ const Service = () => {
 
                 <main id="site-main">
                     <div class="container">
+                        <div class="box-nav d-flex justify-between">
+                            <div class="filter">
+                                <Link to={"/CreatePost/parametres/tribunaux_et_administration"}><i class="fas fa-angle-double-left"></i> Retourner</Link>
+                            </div>
+                        </div>
+                        <br />
+
                         <div class="box-nav d-flex justify-between">
                             <Link to={`/CreatePost/parametres/tribunaux_et_administration/${id}/service/AddService`} class="border-shadow">
                                 <span class="text-gradient">Ajouter Service </span>

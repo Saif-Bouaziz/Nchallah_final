@@ -10,7 +10,7 @@ const TribuShow = ({ Tribunal, Id, OnDelete }) => {
             <td>{Tribunal}</td>
             <td>
                 <Link to={`/CreatePost/parametres/tribunaux_et_administration/${Id}/service`} class="btn border-shadow update">
-                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                    <span class="text-gradient"><i class="bi bi-three-dots"></i></span>
                 </Link>
                 <Link to={`/CreatePost/parametres/tribunaux_et_administration/${Id}`} class="btn border-shadow update">
                     <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
