@@ -25,7 +25,6 @@ const AddService = () => {
         e.preventDefault();
         axios.post('/api/service', form)
             .then(res => {
-                alert(res.data.message)
                 navigate(`/CreatePost/parametres/tribunaux_et_administration/${id}/service`)
             })
             .catch(err => setErrors(err.response.data))

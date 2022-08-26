@@ -7,13 +7,8 @@ import { Link } from 'react-router-dom'
 
 const tribu_et_admin = () => {
     const [tribunaux, setTribunaux] = useState([]);
-    const [form, setForm] = useState({});
-    const [errors, setErrors] = useState({});
     const [message, setMessage] = useState("");
     const [show, setShow] = useState(false);
-    const [searchTerm, setsearchTearm] = useState("");
-
-
 
     const OnDelete = (id) => {
         if (window.confirm("Are you sure to delete this user ? ")) {
@@ -24,18 +19,15 @@ const tribu_et_admin = () => {
                     setTimeout(() => {
                         setShow(false)
                     }, 4000)
-
                 })
         }
-
     }
+
     useEffect(() => {
         axios.get('/api/Tribunaux')
             .then(res => {
                 setTribunaux(res.data)
-
             });
-
     })
 
     return (

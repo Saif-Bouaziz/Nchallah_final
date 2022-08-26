@@ -17,8 +17,6 @@ const Service = () => {
             })
     })
     const [service, setService] = useState([]);
-    const [form, setForm] = useState({});
-    const [errors, setErrors] = useState({});
     const [message, setMessage] = useState("");
     const [show, setShow] = useState(false);
 

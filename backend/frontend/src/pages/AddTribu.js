@@ -24,7 +24,6 @@ const AddTribu = () => {
         e.preventDefault();
         axios.post('/api/Tribunaux', form)
             .then(res => {
-                alert(res.data.message)
                 navigate('/CreatePost/parametres/tribunaux_et_administration')
 
             })
