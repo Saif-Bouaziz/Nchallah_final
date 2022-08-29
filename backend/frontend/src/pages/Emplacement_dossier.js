@@ -3,6 +3,7 @@ import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import EmplacementShow from '../component/EmplacementShow'; 
 import axios from 'axios'
+import bgImage from "../video/background-img.mp4"
 
 
 const Emplacement_dossier = () => {  
@@ -38,9 +39,15 @@ const Emplacement_dossier = () => {
     },[])
 
     return (
-        <div>
+      
+             
+        <div className='app'>
+             <video autoPlay loop muted>
+    <source src={bgImage} type="video/mp4" />
+     </video>
 
             <div className='page'> 
+           
             <header id="header">
     <nav>
         <div class="container">
@@ -91,6 +98,7 @@ const Emplacement_dossier = () => {
 
             </div>
         </div>
+    
     );
 };
 

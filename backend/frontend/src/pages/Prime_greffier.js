@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import axios from 'axios'
-import PrimesShow from '../component/PrimesShow'
+import PrimesShow from '../component/PrimesShow';
+import bgImage from  "../video/background-img.mp4"
 
 
 const Prime_greffier = () => {  
@@ -38,7 +39,11 @@ const Prime_greffier = () => {
     },[])
 
     return (
-        <div>
+        <div className='app'>  
+        <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
 
             <div className='page'> 
             <header id="header">

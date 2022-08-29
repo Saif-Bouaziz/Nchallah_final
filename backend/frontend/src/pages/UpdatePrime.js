@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import InputUtilisateurs from '../component/InputUtilisateurs'
+import InputUtilisateurs from '../component/InputUtilisateurs';
+import bgImage from  "../video/background-img.mp4"
 
 function UpdatePrime() {
   
@@ -36,7 +37,11 @@ function UpdatePrime() {
 },[])
 
   return ( 
-    <div> 
+    <div className='app'>  
+    <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
             
     <div className='page'> 
     <header id="header">

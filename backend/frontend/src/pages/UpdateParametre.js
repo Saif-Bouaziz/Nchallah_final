@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import InputParametres from '../component/InputParametres'
+import InputParametres from '../component/InputParametres';
+import bgImage from  "../video/background-img.mp4"
 
 function UpdateParametre() {
   
@@ -36,7 +37,11 @@ function UpdateParametre() {
 },[])
 
   return ( 
-    <div> 
+    <div className='app'>  
+    <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
             
     <div className='page'> 
     <header id="header">

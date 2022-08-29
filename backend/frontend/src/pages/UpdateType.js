@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
-import InputGroup from '../component/InputGroup'
+import InputGroup from '../component/InputGroup';
+import bgImage from  "../video/background-img.mp4"
 
 function UpdateType() {
   
@@ -36,7 +37,12 @@ function UpdateType() {
 },[])
 
   return ( 
-    <div> 
+    <div className='app'>  
+    <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
+             
             
     <div className='page'> 
     <header id="header">

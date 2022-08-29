@@ -15,6 +15,10 @@ const routerUtilisateurs= require('./routes/utilisateurs.route')
 const routerPrimes= require('./routes/primes.route')  
 const routerParametres= require('./routes/parametres.route')  
 const routerHonoraires= require('./routes/honoraires.route') 
+const routerTransport= require('./routes/transport.route') 
+const routerGreffier= require('./routes/greffier.route')
+const routerClient= require('./routes/client.route')
+
 
 var app = express();
 
@@ -38,8 +42,12 @@ app.use('/api', routerRecette);
 app.use('/api', routerEmplacement);
 app.use('/api', routerPhotocopie);
 app.use('/api', routerUtilisateurs)
+app.use('/api', routerTransport)
+app.use('/api', routerClient)
+
  
 app.use('/api', routerPrimes) ;
+app.use('/api', routerGreffier) ;
 
 app.use('/api', routerParametres) ;
 

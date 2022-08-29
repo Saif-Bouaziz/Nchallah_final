@@ -3,6 +3,7 @@ import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import axios from 'axios'
 import ParametresShow from '../component/ParametresShow';
+import bgImage from  "../video/background-img.mp4"
 
 
 const Parametres_globales = () => {  
@@ -38,7 +39,11 @@ const Parametres_globales = () => {
     },[])
 
     return (
-        <div>
+        <div className='app'>  
+        <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
 
             <div className='page'> 
             <header id="header">

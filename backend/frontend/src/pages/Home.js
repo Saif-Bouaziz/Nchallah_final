@@ -6,6 +6,7 @@ import CreatePost from "./CreatePost";
 import "../index.css"
 import { Navigate } from 'react-router-dom';
 
+
 const Home = () => {
   const [user, setUser] = useState(null);
   //methode se met a jour chaque fois l'authentification change
@@ -19,16 +20,18 @@ const Home = () => {
   }
   return (
     <div className="home">
+     
       <React.Fragment>
-
+      
         <div id="loader-wrapper">
           <div id="loader"><div class="sk-spinner sk-spinner-cube-grid"><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div></div></div>
         </div>
 
-        <section id="header">
+        <section id="header">   
           <div class="container">
             <div class="row text-center">
               <div class="col-md-8">
+            
                 <h1 ><centre><b>Bienvenue!</b></centre></h1>
                 <h1 class="white-text">Gérer vos Factures facilement</h1>
                 <h5 class="white-text">Gérez votre fichier client, établissez des devis et générez des factures gratuitement</h5>

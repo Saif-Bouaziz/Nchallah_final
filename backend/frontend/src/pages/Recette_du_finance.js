@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import RecetteShow from '../component/RecetteShow'; 
-import axios from 'axios'
+import axios from 'axios';
+
+import bgImage from  "../video/background-img.mp4"
 
 
     
@@ -44,7 +46,11 @@ const Recette_du_finance = () => {
 
 
     return (
-        <div>
+        <div className='app'>  
+        <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
             
             <div className='page'>
             <header id="header">

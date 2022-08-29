@@ -3,7 +3,7 @@ import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import TypeShow from '../component/TypeShow'; 
 import axios from 'axios'
-
+import bgImage from  "../video/background-img.mp4"
 
 const Type_dossier = () => {  
     const [users , setUsers] = useState([]) ; 
@@ -38,7 +38,12 @@ const Type_dossier = () => {
     },[])
 
     return (
-        <div>
+        <div className='app'>  
+        <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
+
+         
 
             <div className='page'> 
             <header id="header">

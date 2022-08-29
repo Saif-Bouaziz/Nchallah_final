@@ -40,7 +40,12 @@ import UpdateEmplacement from "./pages/UpdateEmplacement";
 import AddRecette from "./pages/AddRecette";
 import UpdateRecette from "./pages/UpdateRecette";
 import UpdatePhotocopie from "./pages/UpdatePhotocopie";
-
+import UpdateTransport from "./pages/UpdateTransport";
+import AddGreffier from "./pages/AddGreffier";
+import UpdateGreffier from "./pages/UpdateGreffier";
+import Gestion_client from "./pages/Gestion_client";
+import AddClient from "./pages/AddClient";
+import UpdateClient from "./pages/UpdateClient";
 
 const SidebarLayout = () => (
   <>
@@ -55,12 +60,23 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+       
 
 
 
         <Route element={<SidebarLayout />}>
 
           <Route path="/CreatePost" element={<CreatePost />} />
+
+
+          <Route path="/CreatePost/client/gestion_client" element={<Gestion_client />} />
+        <Route path="/CreatePost/client/AddClient" element={<AddClient />} />
+        <Route path="/gestion_client/:id" element={<UpdateClient />} />
+
+          <Route path="/CreatePost/parametres/greffier" element={<Greffier />} /> 
+          <Route path="/AddGreffier" element={<AddGreffier />} /> 
+          <Route path="/greffier/:id" element={<UpdateGreffier />} /> 
+
 
 
           <Route path="/CreatePost/parametres/Type_dossier" element={<Type_dossier />} /> 
@@ -114,6 +130,8 @@ const App = () => {
           <Route path="/CreatePost/parametres/prime_greffier" element={<Prime_greffier />} />
           
           <Route path="/CreatePost/parametres/transport" element={<Transport />} />
+          <Route path="/transport/:id" element={<UpdateTransport />} />
+
           
 
         </Route>

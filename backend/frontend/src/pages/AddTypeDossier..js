@@ -3,6 +3,7 @@ import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import InputGroup from '../component/InputGroup'
 import axios from 'axios';
+import bgImage from  "../video/background-img.mp4"
 
 
 const AddTypeDossier = () => { 
@@ -29,7 +30,10 @@ const AddTypeDossier = () => {
 
 
     return (
-        <div>  
+        <div className='app'>  
+        <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
             <div className='page'>  
             <header id="header">
     <nav>

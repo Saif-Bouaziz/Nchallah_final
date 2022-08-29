@@ -33,7 +33,11 @@ const menuItems = [
     {
         name: 'Client',
         exact: true,
-        to: "/CreatePost/client",
+        subMenus: [
+        { name: "Gestion client", to: "/CreatePost/client/gestion_client" },
+        { name: "Fiche signalitique", to: "/CreatePost/client/fiche_signalitique" },
+        ],
+        //to: "/CreatePost/client",
         iconClassName: 'bi bi-people-fill',
     },
     {
@@ -99,8 +103,8 @@ const SideMenu = () => {
                 </div>
                 <div className='logout'>
                     <button onClick={() => handleLogout()}>
-                        <i className="fa-solid fa-arrow-right-from-bracket"></i>
-                        <p>LogOut</p>
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <p>Déconnexion</p>
                     </button>
 
 

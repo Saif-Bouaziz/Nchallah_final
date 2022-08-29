@@ -7,10 +7,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
 
+
 const CreatePost = () => {
     return (
         <div className='menu'>
-
+           
         </div>
     );
 };

@@ -3,6 +3,7 @@ import SideMenu from '../component/SideMenu';
 import "./Type_dossier.css"; 
 import axios from 'axios'
 import HonorairesShow from '../component/HonorairesShow';
+import bgImage from  "../video/background-img.mp4"
 
 
 const Honoraires_extra = () => {  
@@ -38,7 +39,10 @@ const Honoraires_extra = () => {
     },[])
 
     return (
-        <div>
+        <div className='app'>  
+        <video autoPlay loop muted>
+<source src={bgImage} type="video/mp4" />
+</video>  
 
             <div className='page'> 
             <header id="header">
