@@ -1,28 +1,6 @@
-.menu {
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(255, 255, 255) !important;
-    font-family: 'Open Sans', sans-serif !important;
-    color: rgb(11, 8, 8);
-
-
-}
-
-.menu ul {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.menu li {
-    list-style: none !important;
-}
-
-
 .side-menu {
     position: fixed !important;
-    
-    background:rgba(215, 183, 135, 0.5) !important;
-
+    background: rgba(215, 183, 135, 0.5) !important;
     width: 250px !important;
     height: 100% !important;
     text-align: justify !important;
@@ -39,7 +17,7 @@
 }
 
 .side-menu .main-menu .menu-item.active {
-  
+
     background: #666 !important;
     border-radius: 5px !important;
     color: #fff !important;
@@ -118,5 +96,5 @@
 
 .side-menu-footer .logout {
     float: right !important;
-   
+
 }

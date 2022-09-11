@@ -40,24 +40,25 @@ import UpdateEmplacement from "./pages/UpdateEmplacement";
 import AddRecette from "./pages/AddRecette";
 import UpdateRecette from "./pages/UpdateRecette";
 import UpdatePhotocopie from "./pages/UpdatePhotocopie";
-<<<<<<< HEAD
+
 import UpdateTransport from "./pages/UpdateTransport";
 import AddGreffier from "./pages/AddGreffier";
 import UpdateGreffier from "./pages/UpdateGreffier";
 import Gestion_client from "./pages/Gestion_client";
 import AddClient from "./pages/AddClient";
 import UpdateClient from "./pages/UpdateClient";
-=======
+
 import UpdateTribu from "./pages/UpdateTribu";
 import AddTribu from "./pages/AddTribu";
 import Service from "./pages/Service";
 import AddService from "./pages/AddService";
 import UpdateService from "./pages/UpdateService";
 import EmplacamentDossier1 from "./pages/EmplacamentDossier1";
+import Facture from "./pages/Facture";
 
 
 
->>>>>>> ae77af0ae06f7429ebd36b8bd023099f847c6ccf
+
 
 const SidebarLayout = () => (
   <>
@@ -72,7 +73,7 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-       
+
 
 
 
@@ -81,25 +82,25 @@ const App = () => {
           <Route path="/CreatePost" element={<CreatePost />} />
 
 
-<<<<<<< HEAD
+
           <Route path="/CreatePost/client/gestion_client" element={<Gestion_client />} />
-        <Route path="/CreatePost/client/AddClient" element={<AddClient />} />
-        <Route path="/gestion_client/:id" element={<UpdateClient />} />
+          <Route path="/CreatePost/client/AddClient" element={<AddClient />} />
+          <Route path="/gestion_client/:id" element={<UpdateClient />} />
 
-          <Route path="/CreatePost/parametres/greffier" element={<Greffier />} /> 
-          <Route path="/AddGreffier" element={<AddGreffier />} /> 
-          <Route path="/greffier/:id" element={<UpdateGreffier />} /> 
+          <Route path="/CreatePost/parametres/greffier" element={<Greffier />} />
+          <Route path="/AddGreffier" element={<AddGreffier />} />
+          <Route path="/greffier/:id" element={<UpdateGreffier />} />
 
 
 
-          <Route path="/CreatePost/parametres/Type_dossier" element={<Type_dossier />} /> 
-          <Route path="/AddTypeDossier" element={<AddTypeDossier />} />  
-          <Route path="/:id" element={<UpdateType />} />  
-=======
           <Route path="/CreatePost/parametres/Type_dossier" element={<Type_dossier />} />
           <Route path="/AddTypeDossier" element={<AddTypeDossier />} />
           <Route path="/:id" element={<UpdateType />} />
->>>>>>> ae77af0ae06f7429ebd36b8bd023099f847c6ccf
+
+          <Route path="/CreatePost/parametres/Type_dossier" element={<Type_dossier />} />
+          <Route path="/AddTypeDossier" element={<AddTypeDossier />} />
+          <Route path="/:id" element={<UpdateType />} />
+
 
           <Route path="/CreatePost/parametres/timbre" element={<Timbre />} />
           <Route path="/AddTimbre" element={<AddTimbre />} />
@@ -142,27 +143,16 @@ const App = () => {
           <Route path="/CreatePost/parametres/utilisateur" element={<Utilisateur />} />
           <Route path="/AddUtilisateur" element={<AddUtilisateurs />} />
           <Route path="/utilisateur/:id" element={<Updateutilisateurs />} />
-
-
           <Route path="/CreatePost/parametres/huissier" element={<Huissier />} />
           <Route path="/CreatePost/parametres/collaborateur" element={<Collaborateur />} />
-
           <Route path="/CreatePost/parametres/prime_greffier" element={<Prime_greffier />} />
           <Route path="/AddPrime" element={<AddPrime />} />
           <Route path="/prime/:id" element={<UpdatePrime />} />
-
           <Route path="/CreatePost/parametres/prime_greffier" element={<Prime_greffier />} />
-
           <Route path="/CreatePost/parametres/transport" element={<Transport />} />
-<<<<<<< HEAD
           <Route path="/transport/:id" element={<UpdateTransport />} />
-
-          
-=======
           <Route path="/CreatePost/dossier/Emplacement_Dossier" element={<EmplacamentDossier1 />} />
-
->>>>>>> ae77af0ae06f7429ebd36b8bd023099f847c6ccf
-
+          <Route path="/CreatePost/Facture" element={<Facture />} />
         </Route>
 
 

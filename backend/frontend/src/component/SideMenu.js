@@ -34,8 +34,8 @@ const menuItems = [
         name: 'Client',
         exact: true,
         subMenus: [
-        { name: "Gestion client", to: "/CreatePost/client/gestion_client" },
-        { name: "Fiche signalitique", to: "/CreatePost/client/fiche_signalitique" },
+            { name: "Gestion client", to: "/CreatePost/client/gestion_client" },
+            { name: "Fiche signalitique", to: "/CreatePost/client/fiche_signalitique" },
         ],
         //to: "/CreatePost/client",
         iconClassName: 'bi bi-people-fill',
@@ -47,6 +47,14 @@ const menuItems = [
             { name: "Emplacement dossier", to: "/CreatePost/dossier/Emplacement_Dossier" },
         ],
         iconClassName: 'bi bi-folder',
+    },
+    {
+        name: 'Facture',
+        exact: true,
+        subMenus: [
+            { name: "Créer Facture", to: "/CreatePost/Facture" },
+        ],
+        iconClassName: 'bi bi-receipt-cutoff',
     },
 ];
 
@@ -105,7 +113,7 @@ const SideMenu = () => {
                 </div>
                 <div className='logout'>
                     <button onClick={() => handleLogout()}>
-                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
                         <p>Déconnexion</p>
                     </button>
 
