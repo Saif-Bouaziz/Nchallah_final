@@ -1,4 +1,6 @@
 import React from 'react';
+import img from './silhouette-monochrome-de-balance-d-isolement-sur-le-blanc-110644049.jpg'
+
 
 const Header = () => {
     const handlePrint = () => {
@@ -8,24 +10,9 @@ const Header = () => {
         <div>
             <header className='tw- flex flex-col items-center justify-center mb-5 xl:flex-row xl:justify-between'>
                 <div>
-                    <h1 className='tw- font-bold uppercase tracking-wide text-4xl mb-3'>Invoicer</h1>
+                    <h1 className='tw- font-bold uppercase tracking-wide text-4xl mb-3'><img src={img} className="image" />
+                    </h1>
                 </div>
-                <ul className='tw- flex items-center flex-wrap'>
-                    <li>
-                        <button className='tw- btn btn-print' onClick={handlePrint}>Print</button>
-                    </li>
-                    <li>
-                        <button className='tw- btn btn-download'>
-                            Download
-                        </button>
-                    </li>
-                    <li>
-                        <button className='tw- btn btn-send'>
-                            Send
-                        </button>
-                    </li>
-                </ul>
-
             </header>
         </div>
     );

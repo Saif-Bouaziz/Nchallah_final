@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai"
 import { v4 as uuidv4 } from "uuid"
+import axios from 'axios';
+
 
 const TableForm = ({ description,
     setDescription, quantity,
@@ -57,6 +59,17 @@ const TableForm = ({ description,
     const deleteRow = (id) =>
         setList(list.filter((row) => row.id !== id))
 
+    const [dossier, setDossier] = useState([])
+    useEffect(() => {
+        axios.get('/api/dossier')
+            .then(res => {
+                setDossier(res.data)
+
+            });
+
+    }, [])
+
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -67,14 +80,16 @@ const TableForm = ({ description,
 
                 <div className='tw- md:grid grid-cols-3 gap-10'>
                     <div className='tw- flex flex-col'>
-                        <label htmlFor="quantity">Quantity</label>
-                        <input type="text" name='quantity' id='quantity' placeholder='quantity' value={quantity} onChange={(e) => setQuantity(e.target.value)} />
-                    </div>
+                        <label htmlFor="quantity">Reference</label>
+                        <select name="reference" onChange={e => setQuantity(e.target.value)}  >
+                            {
+                                dossier.map(({ Num }) => (
+                                    <option value={Num}>{Num}</option>
+                                ))
+                            }
+                        </select>                    </div>
 
-                    <div className='tw- flex flex-col'>
-                        <label htmlFor="price">Item price</label>
-                        <input type="text" name='price' id='price' placeholder='item price' value={price} onChange={(e) => setPrice(e.target.value)} />
-                    </div>
+
 
                     <div className='tw- flex flex-col'>
                         <label htmlFor="amount">amount</label>
@@ -90,8 +105,7 @@ const TableForm = ({ description,
                 <thead>
                     <tr className='tw- bg-gray-100 p-1'>
                         <td className='tw- font-bold'>Item description</td>
-                        <td className='tw- font-bold'>Quantity</td>
-                        <td className='tw- font-bold'>Price</td>
+                        <td className='tw- font-bold'>Reference</td>
                         <td className='tw- font-bold'>Amount</td>
                     </tr>
                 </thead>
@@ -101,7 +115,6 @@ const TableForm = ({ description,
                             <tr>
                                 <td>{description}</td>
                                 <td>{quantity}</td>
-                                <td>{price}</td>
                                 <td className='amount'>{amount}</td>
                                 <td><button onClick={() => deleteRow(id)}><AiOutlineDelete className='tw- text-red-500 font-bold text-xl' /></button></td>
                                 <td><button onClick={() => editRow(id)}><AiOutlineEdit className='tw- text-green-500 font-bold text-xl' /></button></td>
@@ -111,7 +124,7 @@ const TableForm = ({ description,
                 ))}
             </table>
             <div>
-                <h2 className='tw- text-gray-800 text-4xl font-bold'>
+                <h2 className='tw- flex items-end justify-end text-gray-800 text-4xl font-bold'>
                     TND {total.toLocaleString()}
                 </h2>
             </div>

@@ -1,3 +1,15 @@
+@media print {
+    .no-print {
+        visibility: hidden;
+    }
+}
+
+@media print {
+    .facture {
+        margin-right: 0mm;
+    }
+}
+
 .page {
     margin-left: 260px !important;
     margin-right: 10px;
@@ -5,7 +17,7 @@
 }
 
 .facture {
-    margin-left: 260px !important;
+    margin-left: 260px;
     margin-right: 10px;
 
 }

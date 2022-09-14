@@ -9,7 +9,6 @@ const Dates = ({ invoiceNumber,
                 <ul>
                     <li className='tw- p-1'><span className='tw- font-bold'>Invoice number:</span>{invoiceNumber}</li>
                     <li className='tw- p-1 bd-gray-100'><span className='tw- font-bold'>Invoice date: </span>{invoiceDate}</li>
-                    <li className='tw- p-1'><span className='tw- font-bold'>Due date: </span>{dueDate}</li>
                 </ul>
             </article>
 

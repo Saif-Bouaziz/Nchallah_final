@@ -71,20 +71,21 @@ const SideMenu = () => {
         window.location.replace("/");
     }
     return (
-        <div className='side-menu'>
-            <div className='main-menu'>
-                <ul>
-                    {menuItems.map((menuItem, index) => (
-                        <MenuItem
-                            key={index}
-                            name={menuItem.name}
-                            exact={menuItem.exact}
-                            to={menuItem.to}
-                            subMenus={menuItem.subMenus || []}
-                            iconClassName={menuItem.iconClassName}
-                        />
-                    ))}
-                    {/*<MenuItem
+        <div className='no-print'>
+            <div className='side-menu'>
+                <div className='main-menu'>
+                    <ul>
+                        {menuItems.map((menuItem, index) => (
+                            <MenuItem
+                                key={index}
+                                name={menuItem.name}
+                                exact={menuItem.exact}
+                                to={menuItem.to}
+                                subMenus={menuItem.subMenus || []}
+                                iconClassName={menuItem.iconClassName}
+                            />
+                        ))}
+                        {/*<MenuItem
                         name={"Parametres"}
                         subMenus={[{ name: "type dossier" }, { name: "taxe" }]}
                     />
@@ -104,25 +105,26 @@ const SideMenu = () => {
                             Dossier
                         </a>
     </li> */}
-                </ul>
-
-            </div>
-            <div className='side-menu-footer'>
-                <div className='user-info'>
-                    <h5> {user?.displayName}</h5>
-                </div>
-                <div className='logout'>
-                    <button onClick={() => handleLogout()}>
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        <p>Déconnexion</p>
-                    </button>
-
+                    </ul>
 
                 </div>
+                <div className='side-menu-footer'>
+                    <div className='user-info'>
+                        <h5> {user?.displayName}</h5>
+                    </div>
+                    <div className='logout'>
+                        <button onClick={() => handleLogout()}>
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            <p>Déconnexion</p>
+                        </button>
+
+
+                    </div>
 
 
 
 
+                </div>
             </div>
         </div>
 
